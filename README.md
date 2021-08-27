@@ -27,7 +27,7 @@ If you use this code, please cite:
 * CUDA 10.0  cudnn 7.2
 
 ### Test
-Download 'resnet50-19c8e357.pth' at [here](https://download.pytorch.org/models/resnet50-19c8e357.pth) and trained model 'PFNet.pth' at [here](https://mhaiyang.github.io/CVPR2021_PFNet/index.html), then run `infer.py`.
+Download 'resnet50-19c8e357.pth' at [here](https://download.pytorch.org/models/resnet50-19c8e357.pth) and trained model 'PDNet.pth' at [here](https://mhaiyang.github.io/CVPR2021_PDNet/index.html), then run `infer.py`.
 
 ### License
 Please see `license.txt`
