@@ -10,15 +10,12 @@
 """
 import time
 import datetime
-import os
-
 import torch
 from PIL import Image
 from torch.autograd import Variable
 from torchvision import transforms
 from collections import OrderedDict
 from numpy import mean
-import numpy as np
 from skimage import io
 
 from config import *
