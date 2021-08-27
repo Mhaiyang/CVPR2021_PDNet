@@ -161,7 +161,7 @@ class PM(nn.Module):
         # final output features
         fusion = fusion2 + fusion4
 
-        return fusion, weight_rgb_normalized, weight_depth_normalized, self.gamma
+        return fusion
 
 
 class DM(nn.Module):
@@ -318,7 +318,7 @@ class PDNet(nn.Module):
         cr1 = self.cr1(layer1)
 
         # positioning
-        pm, weight_rgb_normalized, weight_depth_normalized, gamma = self.pm(cr4, depth_conv4)
+        pm = self.pm(cr4, depth_conv4)
 
         # delineating
         dm3 = self.dm3(cr3, depth_conv3, pm)
@@ -340,4 +340,4 @@ class PDNet(nn.Module):
         if self.training:
             return predict4, predict3, predict2, predict1
 
-        return torch.sigmoid(predict4), torch.sigmoid(predict3), torch.sigmoid(predict2), torch.sigmoid(predict1)
+        return torch.sigmoid(predict1)
