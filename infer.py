@@ -34,7 +34,6 @@ check_mkdir(results_path)
 ckpt_path = './ckpt'
 exp_name = 'PDNet'
 args = {
-    'snapshot': '600',
     'scale': 416,
     'save_results': True,
 }
@@ -63,10 +62,9 @@ results = OrderedDict()
 def main():
     net = PDNet(backbone_path).cuda(device_ids[0])
 
-    if len(args['snapshot']) > 0:
-        print('Load {}.pth for testing'.format(exp_name))
-        net.load_state_dict(torch.load(os.path.join(ckpt_path, exp_name + '.pth')))
-        print('Load {}.pth succeed!'.format(exp_name))
+    print('Load {}.pth for testing'.format(exp_name))
+    net.load_state_dict(torch.load(os.path.join(ckpt_path, exp_name + '.pth')))
+    print('Load {}.pth succeed!'.format(exp_name))
 
     net.eval()
     with torch.no_grad():
