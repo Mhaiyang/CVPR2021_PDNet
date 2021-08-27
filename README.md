@@ -30,7 +30,7 @@ If you use this code, please cite:
 Download 'resnet50-19c8e357.pth' at [here](https://download.pytorch.org/models/resnet50-19c8e357.pth) and trained model 'PDNet.pth' at [here](https://mhaiyang.github.io/CVPR2021_PDNet/index.html), then run `infer.py`.
 
 ### License
-Please see `license.txt`
+Please see `LICENSE`
 
 ### Contact
 E-Mail: mhy666@mail.dlut.edu.cn
